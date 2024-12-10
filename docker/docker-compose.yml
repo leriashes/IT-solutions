@@ -1,0 +1,24 @@
+name: django-web
+
+services:
+  db:
+    image: postgres:17.2
+    container_name: sitedb
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - ${DATABASE_PORT}:5432
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/dockerfile
+    env_file:
+      - ../.env
+    container_name: siteapp
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
