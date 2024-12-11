@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,4 +16,7 @@
 
         {% include 'website/includes/footer.html' %}
     </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/imask"></script>
+    <script src="{% static '/js/phone_number_mask.js' %}"></script>
 </html>
