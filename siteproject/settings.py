@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'callback',
-    'reviews'
+    'reviews',
+    'services'
 ]
 
 MIDDLEWARE = [
