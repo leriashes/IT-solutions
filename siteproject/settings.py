@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'projects',
     'callback',
     'reviews',
-    'services'
+    'services',
+    'website'
 ]
 
 MIDDLEWARE = [
